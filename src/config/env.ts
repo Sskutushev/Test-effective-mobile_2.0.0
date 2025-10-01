@@ -19,3 +19,6 @@ export const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET || 'supersecret
 // Если DATABASE_URL не установлен, используется строка подключения по умолчанию.
 // Эта строка подключения должна соответствовать настройкам вашего Docker-контейнера PostgreSQL.
 export const DATABASE_URL = process.env.DATABASE_URL || "postgresql://user:password@localhost:5432/effective_mobile_db?schema=public";
+
+// Экспортируем токен для Telegram бота.
+export const BOT_TOKEN = process.env.BOT_TOKEN;
