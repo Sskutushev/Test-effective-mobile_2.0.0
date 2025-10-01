@@ -143,7 +143,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\sskut\\Desktop\\effective-mobile\\src\\utils\\prismaClient",
+      "value": "C:\\Users\\sskut\\Desktop\\Effective-mobile 2.0\\src\\utils\\prismaClient",
       "fromEnvVar": null
     },
     "config": {
@@ -157,7 +157,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\sskut\\Desktop\\effective-mobile\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\sskut\\Desktop\\Effective-mobile 2.0\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -171,6 +171,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
