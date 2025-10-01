@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Test-effective-mobile_2.0/static/css/main.63ce2304.css",
+    "main.js": "/Test-effective-mobile_2.0/static/js/main.a12c4c65.js",
+    "static/js/453.d7446e4a.chunk.js": "/Test-effective-mobile_2.0/static/js/453.d7446e4a.chunk.js",
+    "index.html": "/Test-effective-mobile_2.0/index.html",
+    "main.63ce2304.css.map": "/Test-effective-mobile_2.0/static/css/main.63ce2304.css.map",
+    "main.a12c4c65.js.map": "/Test-effective-mobile_2.0/static/js/main.a12c4c65.js.map",
+    "453.d7446e4a.chunk.js.map": "/Test-effective-mobile_2.0/static/js/453.d7446e4a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63ce2304.css",
+    "static/js/main.a12c4c65.js"
+  ]
+}
