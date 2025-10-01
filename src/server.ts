@@ -1,5 +1,12 @@
+/**
+ * @file Главный файл сервера Express.
+ * @description Настраивает и запускает Express-приложение, подключает middleware, маршруты API и глобальный обработчик ошибок.
+ * Также инициализирует Telegram-бота.
+ */
+
 import express from 'express';
 
+// --- Импорты модулей и конфигурации ---
 import cors from 'cors'; // Middleware для разрешения Cross-Origin Resource Sharing (CORS) запросов.
 import helmet from 'helmet'; // Набор middleware для защиты Express-приложений путем установки различных HTTP-заголовков.
 import cookieParser from 'cookie-parser'; // Middleware для парсинга заголовков Cookie.
@@ -12,43 +19,39 @@ import { startBot } from './bot'; // Импорт функции для запу
 // Создание экземпляра Express-приложения.
 const app = express();
 
-// --- Применение Middleware --- //
+/**
+ * @section Настройка Middleware
+ * @description Применение промежуточного ПО для обработки запросов, парсинга данных, обеспечения безопасности и CORS.
+ */
+app.use(express.json()); // Middleware для парсинга JSON-тел запросов. Позволяет Express читать JSON, отправленный клиентом.
+app.use(cookieParser()); // Middleware для парсинга Cookie. Позволяет легко получать доступ к кукам в req.cookies.
+app.use(cors({ credentials: true, origin: process.env.CLIENT_URL || 'http://localhost:3000' })); // Middleware для настройки CORS. Разрешает запросы с определенных доменов (или всех в режиме разработки).
+app.use(helmet()); // Middleware Helmet для установки безопасных HTTP-заголовков, таких как X-Content-Type-Options, X-Frame-Options и других.
 
-// Middleware для парсинга JSON-тел запросов. Позволяет Express читать JSON, отправленный клиентом.
-app.use(express.json());
-// Middleware для парсинга Cookie. Позволяет легко получать доступ к кукам в req.cookies.
-app.use(cookieParser());
-// Middleware для настройки CORS. Разрешает запросы с определенных доменов (или всех в режиме разработки).
-// credentials: true позволяет отправлять куки и заголовки авторизации.
-// origin: process.env.CLIENT_URL || 'http://localhost:3000' указывает разрешенный источник запросов.
-app.use(cors({ credentials: true, origin: process.env.CLIENT_URL || 'http://localhost:3000' }));
-// Middleware Helmet для установки безопасных HTTP-заголовков, таких как X-Content-Type-Options, X-Frame-Options и других.
-app.use(helmet());
+/**
+ * @section Подключение маршрутов API
+ * @description Определение конечных точек API и привязка их к соответствующим обработчикам.
+ */
+app.use('/api/auth', authRoutes); // Подключение маршрутов аутентификации. Все маршруты в authRoutes будут доступны по префиксу /api/auth.
+app.use('/api', userRoutes); // Подключение маршрутов пользователей. Все маршруты в userRoutes будут доступны по префиксу /api.
 
-// --- Подключение маршрутов API --- //
-
-// Подключение маршрутов аутентификации. Все маршруты в authRoutes будут доступны по префиксу /api/auth.
-app.use('/api/auth', authRoutes);
-// Подключение маршрутов пользователей. Все маршруты в userRoutes будут доступны по префиксу /api.
-app.use('/api', userRoutes);
-
-// --- Обработка ошибок --- //
-
-// Глобальный обработчик ошибок. Должен быть подключен последним, после всех маршрутов и других middleware,
-// чтобы перехватывать любые ошибки, возникшие в процессе обработки запроса.
+/**
+ * @section Обработка ошибок
+ * @description Глобальный обработчик ошибок, который перехватывает и обрабатывает все ошибки, возникающие в приложении.
+ * Должен быть подключен последним.
+ */
 app.use(errorMiddleware);
 
-// --- Запуск сервера --- //
-
-// Асинхронная функция для запуска Express-сервера.
+/**
+ * @section Запуск сервера
+ * @description Асинхронная функция для инициализации и запуска Express-сервера и Telegram-бота.
+ */
 const start = async () => {
   try {
-    // Запуск сервера на указанном порту.
-    app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+    app.listen(PORT, () => console.log(`Server started on port ${PORT}`)); // Запуск сервера на указанном порту.
     startBot(); // Запуск телеграм-бота
   } catch (e) {
-    // В случае ошибки при запуске сервера, выводим ее в консоль.
-    console.error(e);
+    console.error(e); // В случае ошибки при запуске сервера, выводим ее в консоль.
   }
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
+import logo from '../logo.png';
 
 const LandingPage = () => {
   return (
@@ -8,7 +9,7 @@ const LandingPage = () => {
       <header className="header">
         <div className="logo">
           {/* Logo will be here */}
-          <img src="/logo.png" alt="Logo" style={{height: '40px'}} />
+          <img src={logo} alt="Logo" style={{height: '40px'}} />
         </div>
         <Link to="/auth" className="btn btn-login">Войти</Link>
       </header>

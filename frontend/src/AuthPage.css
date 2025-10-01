@@ -7,43 +7,66 @@
   background-color: #FAFAFA;
 }
 
-.auth-box {
-  width: 1240px;
-  height: 750px;
-  display: flex;
+.auth-card {
+  width: 450px; /* Desktop and tablet width */
+  padding: 40px;
+  background-color: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Left Panel */
-.auth-left-panel {
-  width: 350px;
-  height: 100%;
-
-  background-size: cover;
-  background-position: center;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Pushes button to the bottom */
   align-items: center;
-  padding-bottom: 20px;
-  box-sizing: border-box;
+  position: relative; /* For absolute positioning of back button */
+}
+
+.auth-logo-wrapper {
+  margin-bottom: 30px;
+}
+
+.auth-logo {
+  height: 80px; /* Adjust size as needed */
 }
 
 .btn-back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
   width: 120px;
   height: 45px;
   border-radius: 90px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #000;
   border: 1px solid #CCC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
-/* Right Panel */
-.auth-right-panel {
-  flex-grow: 1;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
+/* Responsive styles */
+@media (max-width: 768px) { /* Tablet breakpoint */
+  .auth-card {
+    width: 400px; /* Slightly smaller for tablets */
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile breakpoint */
+  .auth-card {
+    width: 300px; /* Mobile width */
+    padding: 20px;
+    height: auto; /* Let height adjust to content */
+  }
+  .btn-back {
+    width: 100px;
+    height: 40px;
+    top: 15px;
+    left: 15px;
+    font-size: 14px;
+  }
+  .auth-logo {
+    height: 60px;
+  }
 }
 
 .auth-tabs {
@@ -114,4 +137,42 @@
 
 .btn-primary:active {
   background-color: #AA1800;
+}
+
+/* Mobile responsiveness for AuthPage */
+@media (max-width: 480px) {
+  .auth-tabs {
+    flex-wrap: wrap; /* Allow tabs to wrap on small screens */
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .auth-tabs button {
+    font-size: 16px; /* Smaller font for tabs */
+    padding: 6px 10px;
+    margin: 5px;
+  }
+
+  .auth-form h2 {
+    font-size: 20px; /* Smaller font for form titles */
+    margin-bottom: 20px;
+  }
+
+  .auth-form input[type="text"],
+  .auth-form input[type="password"],
+  .auth-form input[type="email"],
+  .auth-form input[type="date"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .auth-options {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    height: 40px;
+    font-size: 16px;
+  }
 }
