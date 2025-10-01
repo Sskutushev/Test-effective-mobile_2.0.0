@@ -43,7 +43,7 @@
 Откройте терминал или командную строку и выполните команду:
 
 ```bash
-git clone https://github.com/Sskutushev/Test-effective-mobile_2.0.git
+git clone https://github.com/Sskutushev/Test-effective-mobile_2.0.0.git
 cd Test-effective-mobile_2.0
 ```
 
@@ -327,4 +327,4 @@ npm test
 
 Этот репозиторий настроен для автоматической сборки и развертывания фронтенд-части на GitHub Pages. Любые изменения, отправленные в ветку `master`, запустят новый процесс развертывания.
 
-Рабочее приложение доступно по адресу: [https://sskutushev.github.io/Test-effective-mobile_2.0/](https://sskutushev.github.io/Test-effective-mobile_2.0/)
+Рабочее приложение доступно по адресу: [https://sskutushev.github.io/Test-effective-mobile_2.0.0/](https://sskutushev.github.io/Test-effective-mobile_2.0.0/)

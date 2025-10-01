@@ -1,0 +1,23 @@
+PS C:\Users\sskut\Desktop\Effective-mobile 2.0> npm run dev
+
+> effective-mobile@1.0.0 dev
+> ts-node-dev --respawn --transpile-only src/server.ts
+
+[INFO] 16:55:08 ts-node-dev ver. 2.0.0 (using ts-node ver. 10.9.2, typescript ver. 5.9.3)
+Error: Cannot find module 'cookie-parser'
+Require stack:
+- C:\Users\sskut\Desktop\Effective-mobile 2.0\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:1038:27)
+    at Module.require (node:internal/modules/cjs/loader:1289:19)
+    at require (node:internal/modules/helpers:182:18)
+    at Object.<anonymous> (C:\Users\sskut\Desktop\Effective-mobile 2.0\src\server.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1521:14)
+    at Module._compile (C:\Users\sskut\Desktop\Effective-mobile 2.0\node_modules\source-map-support\source-map-support.js:521:25)
+    at Module.m._compile (C:\Users\sskut\AppData\Local\Temp\ts-node-dev-hook-503605652888305.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\sskut\AppData\Local\Temp\ts-node-dev-hook-503605652888305.js:114:20)
+[ERROR] 16:55:08 Error: Cannot find module 'cookie-parser'
+Require stack:
+- C:\Users\sskut\Desktop\Effective-mobile 2.0\src\server.ts
+
