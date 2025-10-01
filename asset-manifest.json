@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/Test-effective-mobile_2.0/static/css/main.63ce2304.css",
-    "main.js": "/Test-effective-mobile_2.0/static/js/main.a12c4c65.js",
-    "static/js/453.d7446e4a.chunk.js": "/Test-effective-mobile_2.0/static/js/453.d7446e4a.chunk.js",
-    "index.html": "/Test-effective-mobile_2.0/index.html",
-    "main.63ce2304.css.map": "/Test-effective-mobile_2.0/static/css/main.63ce2304.css.map",
-    "main.a12c4c65.js.map": "/Test-effective-mobile_2.0/static/js/main.a12c4c65.js.map",
-    "453.d7446e4a.chunk.js.map": "/Test-effective-mobile_2.0/static/js/453.d7446e4a.chunk.js.map"
+    "main.css": "/Test-effective-mobile_2.0.0/static/css/main.daf330cb.css",
+    "main.js": "/Test-effective-mobile_2.0.0/static/js/main.32c21e89.js",
+    "static/js/453.d7446e4a.chunk.js": "/Test-effective-mobile_2.0.0/static/js/453.d7446e4a.chunk.js",
+    "static/media/logo.png": "/Test-effective-mobile_2.0.0/static/media/logo.f58e0bf6e53461fcaa7c.png",
+    "index.html": "/Test-effective-mobile_2.0.0/index.html",
+    "main.daf330cb.css.map": "/Test-effective-mobile_2.0.0/static/css/main.daf330cb.css.map",
+    "main.32c21e89.js.map": "/Test-effective-mobile_2.0.0/static/js/main.32c21e89.js.map",
+    "453.d7446e4a.chunk.js.map": "/Test-effective-mobile_2.0.0/static/js/453.d7446e4a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.63ce2304.css",
-    "static/js/main.a12c4c65.js"
+    "static/css/main.daf330cb.css",
+    "static/js/main.32c21e89.js"
   ]
 }
