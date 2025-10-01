@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES2021",
+    "types": ["jest", "node"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "outDir": "./dist-jest",
+    "paths": {
+      "@prisma/client": ["./node_modules/@prisma/client"]
+    }
+  },
+  "include": ["src/**/*.ts", "tests/**/*.ts"]
+}
