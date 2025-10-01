@@ -1,0 +1,100 @@
+/* General Body Styles */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; /* Using Open Sans as per design doc */
+  background-color: #FAFAFA; /* Light background from design system */
+  color: #000000; /* Black text color */
+}
+
+/* Landing Page Container */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Styles */
+.header {
+  width: 1240px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Added some padding */
+  box-sizing: border-box;
+}
+
+.logo img {
+  height: 40px; /* Vertically centered */
+}
+
+/* Hero Section Styles */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-section h1 {
+  font-family: 'TT Travels Next', sans-serif; /* Custom font */
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  border-radius: 90px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login {
+  width: 120px;
+  background-color: transparent;
+  color: #FF2D00;
+  border: 2px solid #FF2D00;
+}
+
+.btn-login:hover {
+  background-color: #FF7A5C;
+  color: white;
+  border-color: #FF7A5C;
+}
+
+.btn-login:active {
+  background-color: #AA1800;
+  border-color: #AA1800;
+}
+
+.btn-auth {
+  padding: 0 20px; /* 20px padding on the sides */
+  background-color: #FF2D00; /* Primary color */
+  border: none;
+}
+
+.btn-auth:hover {
+  background-color: #FF7A5C; /* Lighter primary on hover */
+}
+
+.btn-auth:active {
+  background-color: #AA1800; /* Darker primary on click */
+}
